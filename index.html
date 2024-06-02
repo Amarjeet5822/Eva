@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation 2 June</title>
+    <style>
+        #navbar>div {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(59, 170, 59);
+            margin: auto;
+        }
+        #navbar>div>button{
+            background-color: rgb(59, 170, 59);
+            border: none;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;;
+        }
+        #main{
+            display: grid;
+            grid-template-columns: 20% 80%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            margin: 100px;
+            padding: 20px;
+        }
+        #main>.taskGet{
+            border: 1px solid black;
+            margin-left:10px;
+        }
+
+        .form{
+           border: 1px solid black;
+           padding: 10px; 
+        }
+        .form>form>div{
+            padding: 5px;
+        }
+        .form>form>span>select{
+            margin-left: 20px;
+            padding-left:10px ;
+        }
+        .form>form>div:nth-child(2){
+            margin-left: 30px;
+        }
+        #creatTask>button{
+            background-color: rgb(59, 170, 59);
+            padding: 5px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cont">
+        <nav id="navbar">
+            <div>
+                <p>Masai-Task-Manager</p>
+                <button onclick="home()">Home</button>
+                <button onclick="deletedTaks()">Deleted Task</button>
+            </div>
+        </nav>
+        <div id="main">
+            <div class="form">
+                <form>
+                    <div>
+                        <input id="userTask" type="text">
+                    </div>
+                    <span>
+                        <select id="priority">
+                            <option style="color:rgb(0,168, 0)">low</option>
+                            <option style="color: rgb(0,0,255);">medium</option>
+                            <option style="color: rgb(255,0,0);">high</option>
+                        </select>
+                    </span>
+                    <div id="creatTask">
+                        <button onclick="creatTask()">Create Task</button>
+                    </div>
+                </form>
+            </div>
+            <div class="taskGet">
+                <thead>
+                    <tr>Name</tr>
+                    <tr>Priority</tr>
+                    <tr>Status</tr>
+                    <tr>Remove</tr>
+                </thead>
+                <!-- <tbody>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tbody> -->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/scripts/deletedTask.js"></script>
+</html>
